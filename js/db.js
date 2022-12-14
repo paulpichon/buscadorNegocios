@@ -1,5 +1,6 @@
 const negocios = [
-    {
+    {   
+        nombre: 'negocio 1',
         municipio : 'Tlaxcala',
         tipoComida: 'Mexicana',
         disponinilidad: 'Abierto',
@@ -8,5 +9,324 @@ const negocios = [
         metodoPago: 'Efectivo',
         calificacion: 4.5,
         estacionamiento: 'No'
-    }
+    },
+    {   
+        nombre: 'negocio 2',
+        municipio : 'Apizaco',
+        tipoComida: 'Italiana',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 300,
+        rangoPrecioMaximo: 1800,
+        metodoPago: 'Tarjeta de debito/Credito',
+        calificacion: 4.0,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 3',
+        municipio : 'Tlaxco',
+        tipoComida: 'Española',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 500,
+        rangoPrecioMaximo: 2500,
+        metodoPago: 'Paypal',
+        calificacion: 4.2,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 4',
+        municipio : 'Chiautempan',
+        tipoComida: 'Francesa',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 500,
+        rangoPrecioMaximo: 3500,
+        metodoPago: 'Bitcoin',
+        calificacion: 4.8,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 5',
+        municipio : 'Zacatelco',
+        tipoComida: 'Japonesa',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 800,
+        rangoPrecioMaximo: 2000,
+        metodoPago: 'CoDi',
+        calificacion: 4.2,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 6',
+        municipio : 'Huamantla',
+        tipoComida: 'China',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 800,
+        rangoPrecioMaximo: 2000,
+        metodoPago: 'Contraentrega',
+        calificacion: 4.2,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 7',
+        municipio : 'Tlaxcala',
+        tipoComida: 'China',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 350,
+        rangoPrecioMaximo: 1200,
+        metodoPago: 'Contraentrega',
+        calificacion: 3.8,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 8',
+        municipio : 'Apizaco',
+        tipoComida: 'Japonesa',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 600,
+        rangoPrecioMaximo: 2200,
+        metodoPago: 'Bitcoin',
+        calificacion: 4.2,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 9',
+        municipio : 'Tlaxco',
+        tipoComida: 'Francesa',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 900,
+        rangoPrecioMaximo: 3800,
+        metodoPago: 'Bitcoin',
+        calificacion: 4.8,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 10',
+        municipio : 'Chiautempan',
+        tipoComida: 'Española',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 650,
+        rangoPrecioMaximo: 3000,
+        metodoPago: 'Paypal',
+        calificacion: 4.8,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 11',
+        municipio : 'Zacatelco',
+        tipoComida: 'Italiana',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 500,
+        rangoPrecioMaximo: 2200,
+        metodoPago: 'Tarjeta de debito/Credito',
+        calificacion: 3.6,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 12',
+        municipio : 'Huamantla',
+        tipoComida: 'Mexicana',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 700,
+        rangoPrecioMaximo: 2300,
+        metodoPago: 'Efectivo',
+        calificacion: 4.0,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 13',
+        municipio : 'Tlaxcala',
+        tipoComida: 'Francesa',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 550,
+        rangoPrecioMaximo: 1700,
+        metodoPago: 'Tarjeta de debito/Credito',
+        calificacion: 4.1,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 14',
+        municipio : 'Apizaco',
+        tipoComida: 'Japonesa',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 600,
+        rangoPrecioMaximo: 2200,
+        metodoPago: 'Paypal',
+        calificacion: 4.2,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 15',
+        municipio : 'Tlaxco',
+        tipoComida: 'China',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 1000,
+        rangoPrecioMaximo: 5200,
+        metodoPago: 'Bitcoin',
+        calificacion: 4.3,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 16',
+        municipio : 'Chiautempan',
+        tipoComida: 'Mexicana',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 300,
+        rangoPrecioMaximo: 1900,
+        metodoPago: 'Bitcoin',
+        calificacion: 4.0,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 17',
+        municipio : 'Zacatelco',
+        tipoComida: 'Italiana',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 800,
+        rangoPrecioMaximo: 2900,
+        metodoPago: 'CoDi',
+        calificacion: 3.9,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 18',
+        municipio : 'Huamantla',
+        tipoComida: 'Española',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 700,
+        rangoPrecioMaximo: 2000,
+        metodoPago: 'Contraentrega',
+        calificacion: 4.3,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 19',
+        municipio : 'Tlaxcala',
+        tipoComida: 'Italiana',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 550,
+        rangoPrecioMaximo: 1700,
+        metodoPago: 'Tarjeta de debito/Credito',
+        calificacion: 4.1,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 20',
+        municipio : 'Apizaco',
+        tipoComida: 'Española',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 600,
+        rangoPrecioMaximo: 2200,
+        metodoPago: 'Paypal',
+        calificacion: 4.2,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 21',
+        municipio : 'Tlaxco',
+        tipoComida: 'China',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 1000,
+        rangoPrecioMaximo: 5200,
+        metodoPago: 'Bitcoin',
+        calificacion: 4.3,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 22',
+        municipio : 'Chiautempan',
+        tipoComida: 'Mexicana',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 300,
+        rangoPrecioMaximo: 1900,
+        metodoPago: 'Bitcoin',
+        calificacion: 4.0,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 23',
+        municipio : 'Zacatelco',
+        tipoComida: 'Francesa',
+        disponinilidad: 'Cerrado',
+        rangoPrecioMinimo: 800,
+        rangoPrecioMaximo: 2900,
+        metodoPago: 'CoDi',
+        calificacion: 3.9,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 24',
+        municipio : 'Huamantla',
+        tipoComida: 'Japonesa',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 700,
+        rangoPrecioMaximo: 2000,
+        metodoPago: 'Contraentrega',
+        calificacion: 4.3,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 25',
+        municipio : 'Tlaxcala',
+        tipoComida: 'Italiana',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 400,
+        rangoPrecioMaximo: 1200,
+        metodoPago: 'Tarjeta de debito/Credito',
+        calificacion: 4.6,
+        estacionamiento: 'Si'
+    },
+    {   
+        nombre: 'negocio 26',
+        municipio : 'Apizaco',
+        tipoComida: 'Española',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 600,
+        rangoPrecioMaximo: 2200,
+        metodoPago: 'Paypal',
+        calificacion: 4.2,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 27',
+        municipio : 'Tlaxco',
+        tipoComida: 'China',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 1300,
+        rangoPrecioMaximo: 3000,
+        metodoPago: 'Bitcoin',
+        calificacion: 4.0,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 28',
+        municipio : 'Chiautempan',
+        tipoComida: 'Mexicana',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 800,
+        rangoPrecioMaximo: 4900,
+        metodoPago: 'Bitcoin',
+        calificacion: 4.3,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 29',
+        municipio : 'Zacatelco',
+        tipoComida: 'Francesa',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 1000,
+        rangoPrecioMaximo: 5000,
+        metodoPago: 'CoDi',
+        calificacion: 4.9,
+        estacionamiento: 'No'
+    },
+    {   
+        nombre: 'negocio 30',
+        municipio : 'Huamantla',
+        tipoComida: 'Japonesa',
+        disponinilidad: 'Abierto',
+        rangoPrecioMinimo: 800,
+        rangoPrecioMaximo: 3600,
+        metodoPago: 'Contraentrega',
+        calificacion: 4.7,
+        estacionamiento: 'Si'
+    },
 ];
