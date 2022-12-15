@@ -44,6 +44,15 @@ function eventListeners() {
         //llamamos la funcion para hacer la busqueda
         filtrarBusqueda();
     });
+    //agregamos un listener al input tipo de comida
+    tipoComida.addEventListener('change', e => {
+        //obtenemos el valor del input
+        //console.log(e.target.value);
+        //insertamos el valor al objeto de busqueda
+        objBusqueda.tipoComida = e.target.value;
+        //llamamos la funcion para hacer la busqueda
+        filtrarBusqueda();
+    });
 }
 //funciones
 //mostrar negocios
@@ -65,7 +74,7 @@ function mostrarNegocios() {
 }
 //funcion para hacer el filtro de busqueda
 function filtrarBusqueda() {
-    const resultado = negocios.filter( filtrarMunicipio );
+    const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida);
     console.log( resultado );
 }
 //funcion para filtrar por municipio
@@ -75,6 +84,16 @@ function filtrarMunicipio( negocio ) {
     //verificar si viene algo en municipio
     if (municipio) {
         return negocio.municipio === municipio;
+    }
+    return negocio;
+}
+//funcion para filtrar por TipoComida
+function filtrarTipoComida( negocio ) {
+    //destructuring
+    const { tipoComida } = objBusqueda;
+    //verificar si viene algo en tipoComida
+    if (tipoComida) {
+        return negocio.tipoComida === tipoComida;
     }
     return negocio;
 }

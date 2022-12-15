@@ -24,7 +24,7 @@ const negocios = [
     {   
         nombre: 'negocio 3',
         municipio : 'Tlaxco',
-        tipoComida: 'Española',
+        tipoComida: 'Francesa',
         disponibilidad: 'Abierto',
         rangoPrecioMinimo: 500,
         rangoPrecioMaximo: 2500,
@@ -46,7 +46,7 @@ const negocios = [
     {   
         nombre: 'negocio 5',
         municipio : 'Zacatelco',
-        tipoComida: 'Japonesa',
+        tipoComida: 'Francesa',
         disponibilidad: 'Cerrado',
         rangoPrecioMinimo: 800,
         rangoPrecioMaximo: 2000,
@@ -112,7 +112,7 @@ const negocios = [
     {   
         nombre: 'negocio 11',
         municipio : 'Huamantla',
-        tipoComida: 'Italiana',
+        tipoComida: 'Mexicana',
         disponibilidad: 'Abierto',
         rangoPrecioMinimo: 500,
         rangoPrecioMaximo: 2200,
@@ -266,7 +266,7 @@ const negocios = [
     {   
         nombre: 'negocio 25',
         municipio : 'Tlaxcala',
-        tipoComida: 'Italiana',
+        tipoComida: 'Japonesa',
         disponibilidad: 'Abierto',
         rangoPrecioMinimo: 400,
         rangoPrecioMaximo: 1200,
@@ -277,7 +277,7 @@ const negocios = [
     {   
         nombre: 'negocio 26',
         municipio : 'Apizaco',
-        tipoComida: 'Española',
+        tipoComida: 'Mexicana',
         disponibilidad: 'Abierto',
         rangoPrecioMinimo: 600,
         rangoPrecioMaximo: 2200,
