@@ -89,7 +89,7 @@ const negocios = [
     },
     {   
         nombre: 'negocio 9',
-        municipio : 'Tlaxco',
+        municipio : 'Chiautempan',
         tipoComida: 'Francesa',
         disponibilidad: 'Cerrado',
         rangoPrecioMinimo: 900,
@@ -111,7 +111,7 @@ const negocios = [
     },
     {   
         nombre: 'negocio 11',
-        municipio : 'Zacatelco',
+        municipio : 'Huamantla',
         tipoComida: 'Italiana',
         disponibilidad: 'Abierto',
         rangoPrecioMinimo: 500,
@@ -122,7 +122,7 @@ const negocios = [
     },
     {   
         nombre: 'negocio 12',
-        municipio : 'Huamantla',
+        municipio : 'Tlaxcala',
         tipoComida: 'Mexicana',
         disponibilidad: 'Abierto',
         rangoPrecioMinimo: 700,
@@ -320,7 +320,7 @@ const negocios = [
     },
     {   
         nombre: 'negocio 30',
-        municipio : 'Huamantla',
+        municipio : 'Zacatelco',
         tipoComida: 'Japonesa',
         disponibilidad: 'Abierto',
         rangoPrecioMinimo: 800,

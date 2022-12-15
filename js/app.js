@@ -1,17 +1,54 @@
 //constantes
 const resultados = document.querySelector('#resultados');
+//input municipio
+const municipio = document.querySelector('#municipio');
+//input tipo de comida
+const tipoComida = document.querySelector('#tipoComida');
+//input disponibilidad
+const disponibilidad = document.querySelector('#disponibilidad');
+//input calificacion
+const calificacion = document.querySelector('#calificacion');
+//input minimo
+const minimo = document.querySelector('#minimo');
+//input maximo
+const maximo = document.querySelector('#maximo');
+//input metodoPago
+const metodoPago = document.querySelector('#metodoPago');
+//input estacionamiento
+const estacionamiento = document.querySelector('#estacionamiento');
+
+//creamos un objeto con los atributos vacios
+const objBusqueda = {
+    municipio: '',
+    tipoComida: '',
+    disponibilidad: '',
+    calificacion: '',
+    minimo: '',
+    maximo: '',
+    metodoPago: '',
+    estacionamiento: ''
+}
+
+
 //listeners
 eventListeners();
 function eventListeners() {
     //mostrar negocios
-    document.addEventListener('DOMContentLoaded', mostrarNegocios)
+    document.addEventListener('DOMContentLoaded', mostrarNegocios);
+    //agregamos un listener al input municipio
+    municipio.addEventListener('change', e => {
+        //obtenemos el valor del input
+        //console.log(e.target.value);
+        //insertamos el valor al objeto de busqueda
+        objBusqueda.municipio = e.target.value;
+        //llamamos la funcion para hacer la busqueda
+        filtrarBusqueda();
+    });
 }
-
 //funciones
 //mostrar negocios
 function mostrarNegocios() {
     negocios.forEach( negocio => {
-        console.log( negocio );
         //destructuring
         const { calificacion, disponibilidad, estacionamiento, metodoPago, municipio, nombre, rangoPrecioMaximo, rangoPrecioMinimo, tipoComida } = negocio;
         //construir el HTML
@@ -25,4 +62,19 @@ function mostrarNegocios() {
         resultados.appendChild( pNegocio );
 
     });
+}
+//funcion para hacer el filtro de busqueda
+function filtrarBusqueda() {
+    const resultado = negocios.filter( filtrarMunicipio );
+    console.log( resultado );
+}
+//funcion para filtrar por municipio
+function filtrarMunicipio( negocio ) {
+    //destructuring
+    const { municipio } = objBusqueda;
+    //verificar si viene algo en municipio
+    if (municipio) {
+        return negocio.municipio === municipio;
+    }
+    return negocio;
 }
