@@ -34,7 +34,9 @@ const objBusqueda = {
 eventListeners();
 function eventListeners() {
     //mostrar negocios
-    document.addEventListener('DOMContentLoaded', mostrarNegocios);
+    document.addEventListener('DOMContentLoaded', () => {
+        mostrarNegocios( negocios );
+    });
     //agregamos un listener al input municipio
     municipio.addEventListener('change', e => {
         //obtenemos el valor del input
@@ -56,7 +58,9 @@ function eventListeners() {
 }
 //funciones
 //mostrar negocios
-function mostrarNegocios() {
+function mostrarNegocios( negocios ) {
+    //limpiar el html anterior
+    limpiarHTML();
     negocios.forEach( negocio => {
         //destructuring
         const { calificacion, disponibilidad, estacionamiento, metodoPago, municipio, nombre, rangoPrecioMaximo, rangoPrecioMinimo, tipoComida } = negocio;
@@ -75,7 +79,19 @@ function mostrarNegocios() {
 //funcion para hacer el filtro de busqueda
 function filtrarBusqueda() {
     const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida);
-    console.log( resultado );
+    //renderizar
+    if (resultado.length > 0 ) {
+        mostrarNegocios( resultado );
+    }else{
+        //mostrar alerta de no negocios encontrados
+        console.log("no hay negocios con esos parametros");
+    }
+}
+//limpiar el html anterior
+function limpiarHTML() {
+    while( resultados.firstChild ) {
+        resultados.removeChild(resultados.firstChild);
+    }
 }
 //funcion para filtrar por municipio
 function filtrarMunicipio( negocio ) {
