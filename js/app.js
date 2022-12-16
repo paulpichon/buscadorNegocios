@@ -84,8 +84,39 @@ function filtrarBusqueda() {
         mostrarNegocios( resultado );
     }else{
         //mostrar alerta de no negocios encontrados
-        console.log("no hay negocios con esos parametros");
+        mostrarAlerta('NO HAY RESULTADO CON ESTOS PARAMETROS, INTENTAR CON OTROS PARAMETROS');
     }
+}
+//funcion para mostrar la alerta de error
+function mostrarAlerta( mensajeError ) {
+    //limpiar el HTML anterior
+    limpiarHTML();
+    //construir el HTML
+    //div contenedor
+    const divContenedor = document.createElement('div');
+    //estilos
+    divContenedor.classList.add('text-center');
+    //insertar un atributo tipo role
+    divContenedor.setAttribute('role', 'alert');
+    //div de titulo
+    const divTitulo = document.createElement('div');
+    //estilos
+    divTitulo.classList.add('bg-red-500', 'text-white', 'font-bold', 'rounded-t', 'px-4', 'py-2');
+    //textcontent
+    divTitulo.textContent = '¡CUIDADO!'
+    //div mensaje
+    const divMensaje = document.createElement('div');
+    //estilos
+    divMensaje.classList.add('border', 'border-t-0', 'border-red-400', 'rounded-b', 'bg-red-100', 'px-4', 'py-3', 'text-red-700');
+    divMensaje.textContent = mensajeError;
+
+    //insertar divtitulo a divcontenedor
+    divContenedor.appendChild( divTitulo );
+    //insertar divmensaje a divcontenedor
+    divContenedor.appendChild( divMensaje );
+    //RENDERIZAR
+    resultados.appendChild( divContenedor );
+
 }
 //limpiar el html anterior
 function limpiarHTML() {
