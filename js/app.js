@@ -55,6 +55,60 @@ function eventListeners() {
         //llamamos la funcion para hacer la busqueda
         filtrarBusqueda();
     });
+    //agregamos un listener al input disponibilidad
+    disponibilidad.addEventListener('change', e => {
+        //obtenemos el valor del input
+        //console.log(e.target.value);
+        //insertamos el valor al objeto de busqueda
+        objBusqueda.disponibilidad = e.target.value;
+        //llamamos la funcion para hacer la busqueda
+        filtrarBusqueda();
+    });
+    //agregamos un listener al input calificacion
+    calificacion.addEventListener('change', e => {
+        //obtenemos el valor del input
+        //console.log(e.target.value);
+        //insertamos el valor al objeto de busqueda
+        objBusqueda.calificacion = e.target.value;
+        //llamamos la funcion para hacer la busqueda
+        filtrarBusqueda();
+    });
+    //agregamos un listener al input minimo
+    minimo.addEventListener('change', e => {
+        //obtenemos el valor del input
+        //console.log(e.target.value);
+        //insertamos el valor al objeto de busqueda
+        objBusqueda.minimo = e.target.value;
+        //llamamos la funcion para hacer la busqueda
+        filtrarBusqueda();
+    });
+    //agregamos un listener al input maximo
+    maximo.addEventListener('change', e => {
+        //obtenemos el valor del input
+        //console.log(e.target.value);
+        //insertamos el valor al objeto de busqueda
+        objBusqueda.maximo = e.target.value;
+        //llamamos la funcion para hacer la busqueda
+        filtrarBusqueda();
+    });
+    //agregamos un listener al input metodoPago
+    metodoPago.addEventListener('change', e => {
+        //obtenemos el valor del input
+        //console.log(e.target.value);
+        //insertamos el valor al objeto de busqueda
+        objBusqueda.metodoPago = e.target.value;
+        //llamamos la funcion para hacer la busqueda
+        filtrarBusqueda();
+    });
+    //agregamos un listener al input estacionamiento
+    estacionamiento.addEventListener('change', e => {
+        //obtenemos el valor del input
+        //console.log(e.target.value);
+        //insertamos el valor al objeto de busqueda
+        objBusqueda.estacionamiento = e.target.value;
+        //llamamos la funcion para hacer la busqueda
+        filtrarBusqueda();
+    });
 }
 //funciones
 //mostrar negocios
@@ -78,7 +132,7 @@ function mostrarNegocios( negocios ) {
 }
 //funcion para hacer el filtro de busqueda
 function filtrarBusqueda() {
-    const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida);
+    const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida).filter( filtrarDisponibilidad );
     //renderizar
     if (resultado.length > 0 ) {
         mostrarNegocios( resultado );
@@ -141,6 +195,16 @@ function filtrarTipoComida( negocio ) {
     //verificar si viene algo en tipoComida
     if (tipoComida) {
         return negocio.tipoComida === tipoComida;
+    }
+    return negocio;
+}
+//funcion para filtrar por Disponibilidad (Abiert/Cerrado)
+function filtrarDisponibilidad( negocio ) {
+    //destructuring
+    const { disponibilidad } = objBusqueda;
+    //comprobar si viene disponibilidad
+    if ( disponibilidad ) {
+        return negocio.disponibilidad === disponibilidad;
     }
     return negocio;
 }
