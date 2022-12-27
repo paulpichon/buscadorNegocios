@@ -69,7 +69,7 @@ function eventListeners() {
         //obtenemos el valor del input
         //console.log(e.target.value);
         //insertamos el valor al objeto de busqueda
-        objBusqueda.calificacion = e.target.value;
+        objBusqueda.calificacion = parseFloat(e.target.value);
         //llamamos la funcion para hacer la busqueda
         filtrarBusqueda();
     });
@@ -132,7 +132,7 @@ function mostrarNegocios( negocios ) {
 }
 //funcion para hacer el filtro de busqueda
 function filtrarBusqueda() {
-    const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida).filter( filtrarDisponibilidad );
+    const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida).filter( filtrarDisponibilidad ).filter( filtrarCalificacion );
     //renderizar
     if (resultado.length > 0 ) {
         mostrarNegocios( resultado );
@@ -205,6 +205,26 @@ function filtrarDisponibilidad( negocio ) {
     //comprobar si viene disponibilidad
     if ( disponibilidad ) {
         return negocio.disponibilidad === disponibilidad;
+    }
+    return negocio;
+}
+//funcion para filtrar por Calificacion 
+function filtrarCalificacion( negocio ) {
+    //destructuring
+    const { calificacion } = objBusqueda;
+    //comprobar si viene calificacion
+    if ( calificacion ) {
+        if ( calificacion === 1 ) {
+            return negocio.calificacion >= 1 && negocio.calificacion < 2;
+        } else if ( calificacion === 2 ) {
+            return negocio.calificacion >= 2 && negocio.calificacion < 3;
+        }else if ( calificacion === 3 ) {
+            return negocio.calificacion >= 3 && negocio.calificacion < 4;
+        }else if ( calificacion === 4 ) {
+            return negocio.calificacion >= 4 && negocio.calificacion < 5;
+        }else if ( calificacion === 5 ) {
+            return negocio.calificacion >= 5;
+        }
     }
     return negocio;
 }
