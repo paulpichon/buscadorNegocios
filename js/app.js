@@ -132,7 +132,7 @@ function mostrarNegocios( negocios ) {
 }
 //funcion para hacer el filtro de busqueda
 function filtrarBusqueda() {
-    const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida).filter( filtrarDisponibilidad ).filter( filtrarCalificacion ).filter(  filtrarMinimo ).filter( filtrarMaximo ).filter( filtrarMetodoPago );
+    const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida).filter( filtrarDisponibilidad ).filter( filtrarCalificacion ).filter(  filtrarMinimo ).filter( filtrarMaximo ).filter( filtrarMetodoPago ).filter( filtrarEstacionamiento );
     //renderizar
     if (resultado.length > 0 ) {
         mostrarNegocios( resultado );
@@ -252,4 +252,12 @@ function filtrarMetodoPago( negocio ) {
         return negocio.metodoPago === metodoPago;
     }
     return negocio;
+}
+//funcion para filtrar por si hay estacionamiento en el  establecimiento
+function filtrarEstacionamiento( negocio ) {
+    const { estacionamiento } = objBusqueda;
+    if (estacionamiento) {
+        return negocio.estacionamiento === estacionamiento;
+    }
+    return estacionamiento;
 }
