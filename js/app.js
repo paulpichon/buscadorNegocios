@@ -259,5 +259,5 @@ function filtrarEstacionamiento( negocio ) {
     if (estacionamiento) {
         return negocio.estacionamiento === estacionamiento;
     }
-    return estacionamiento;
+    return negocio;
 }
