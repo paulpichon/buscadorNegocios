@@ -29,7 +29,7 @@ const negocios = [
         rangoPrecioMinimo: 500,
         rangoPrecioMaximo: 2500,
         metodoPago: 'Paypal',
-        calificacion: 4.2,
+        calificacion: 1.5,
         estacionamiento: 'Si'
     },
     {   
@@ -84,7 +84,7 @@ const negocios = [
         rangoPrecioMinimo: 600,
         rangoPrecioMaximo: 2200,
         metodoPago: 'Bitcoin',
-        calificacion: 4.2,
+        calificacion: 2.3,
         estacionamiento: 'No'
     },
     {   
@@ -125,7 +125,7 @@ const negocios = [
         municipio : 'Tlaxcala',
         tipoComida: 'Mexicana',
         disponibilidad: 'Abierto',
-        rangoPrecioMinimo: 700,
+        rangoPrecioMinimo: 2250,
         rangoPrecioMaximo: 2500,
         metodoPago: 'Efectivo',
         calificacion: 4.0,
@@ -139,7 +139,7 @@ const negocios = [
         rangoPrecioMinimo: 550,
         rangoPrecioMaximo: 1700,
         metodoPago: 'Tarjeta de debito/Credito',
-        calificacion: 4.1,
+        calificacion: 3.4,
         estacionamiento: 'No'
     },
     {   
@@ -150,7 +150,7 @@ const negocios = [
         rangoPrecioMinimo: 600,
         rangoPrecioMaximo: 2200,
         metodoPago: 'Paypal',
-        calificacion: 4.2,
+        calificacion: 2.8,
         estacionamiento: 'No'
     },
     {   
@@ -169,7 +169,7 @@ const negocios = [
         municipio : 'Chiautempan',
         tipoComida: 'Mexicana',
         disponibilidad: 'Cerrado',
-        rangoPrecioMinimo: 500,
+        rangoPrecioMinimo: 850,
         rangoPrecioMaximo: 1900,
         metodoPago: 'Bitcoin',
         calificacion: 4.0,
@@ -205,7 +205,7 @@ const negocios = [
         rangoPrecioMinimo: 550,
         rangoPrecioMaximo: 1700,
         metodoPago: 'Tarjeta de debito/Credito',
-        calificacion: 4.1,
+        calificacion: 3.4,
         estacionamiento: 'No'
     },
     {   
@@ -213,7 +213,7 @@ const negocios = [
         municipio : 'Apizaco',
         tipoComida: 'Española',
         disponibilidad: 'Abierto',
-        rangoPrecioMinimo: 600,
+        rangoPrecioMinimo: 1850,
         rangoPrecioMaximo: 2200,
         metodoPago: 'Paypal',
         calificacion: 4.2,
@@ -260,7 +260,7 @@ const negocios = [
         rangoPrecioMinimo: 700,
         rangoPrecioMaximo: 2000,
         metodoPago: 'Contraentrega',
-        calificacion: 4.3,
+        calificacion: 2.9,
         estacionamiento: 'No'
     },
     {   
@@ -282,7 +282,7 @@ const negocios = [
         rangoPrecioMinimo: 600,
         rangoPrecioMaximo: 2200,
         metodoPago: 'Paypal',
-        calificacion: 4.2,
+        calificacion: 1.8,
         estacionamiento: 'No'
     },
     {   
@@ -304,7 +304,7 @@ const negocios = [
         rangoPrecioMinimo: 800,
         rangoPrecioMaximo: 2400,
         metodoPago: 'Bitcoin',
-        calificacion: 4.3,
+        calificacion: 2.5,
         estacionamiento: 'No'
     },
     {   
@@ -315,7 +315,7 @@ const negocios = [
         rangoPrecioMinimo: 1000,
         rangoPrecioMaximo: 2750,
         metodoPago: 'CoDi',
-        calificacion: 4.9,
+        calificacion: 5.0,
         estacionamiento: 'No'
     },
     {   

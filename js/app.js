@@ -78,7 +78,7 @@ function eventListeners() {
         //obtenemos el valor del input
         //console.log(e.target.value);
         //insertamos el valor al objeto de busqueda
-        objBusqueda.minimo = e.target.value;
+        objBusqueda.minimo = parseInt(e.target.value);
         //llamamos la funcion para hacer la busqueda
         filtrarBusqueda();
     });
@@ -87,7 +87,7 @@ function eventListeners() {
         //obtenemos el valor del input
         //console.log(e.target.value);
         //insertamos el valor al objeto de busqueda
-        objBusqueda.maximo = e.target.value;
+        objBusqueda.maximo = parseInt(e.target.value);
         //llamamos la funcion para hacer la busqueda
         filtrarBusqueda();
     });
@@ -132,7 +132,7 @@ function mostrarNegocios( negocios ) {
 }
 //funcion para hacer el filtro de busqueda
 function filtrarBusqueda() {
-    const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida).filter( filtrarDisponibilidad ).filter( filtrarCalificacion );
+    const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida).filter( filtrarDisponibilidad ).filter( filtrarCalificacion ).filter(  filtrarMinimo ).filter( filtrarMaximo );
     //renderizar
     if (resultado.length > 0 ) {
         mostrarNegocios( resultado );
@@ -225,6 +225,22 @@ function filtrarCalificacion( negocio ) {
         }else if ( calificacion === 5 ) {
             return negocio.calificacion >= 5;
         }
+    }
+    return negocio;
+}
+//funcion para filtrar por precio minimo
+function filtrarMinimo( negocio ) {
+    const { minimo } = objBusqueda;
+    if ( minimo ) {
+        return negocio.rangoPrecioMinimo >= minimo;
+    }
+    return negocio;
+}
+//funcion para filtrar por precio maximo
+function filtrarMaximo( negocio ) {
+    const { maximo } = objBusqueda;
+    if (maximo ) {
+        return negocio.rangoPrecioMaximo <= maximo;
     }
     return negocio;
 }
