@@ -132,7 +132,7 @@ function mostrarNegocios( negocios ) {
 }
 //funcion para hacer el filtro de busqueda
 function filtrarBusqueda() {
-    const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida).filter( filtrarDisponibilidad ).filter( filtrarCalificacion ).filter(  filtrarMinimo ).filter( filtrarMaximo );
+    const resultado = negocios.filter( filtrarMunicipio ).filter( filtrarTipoComida).filter( filtrarDisponibilidad ).filter( filtrarCalificacion ).filter(  filtrarMinimo ).filter( filtrarMaximo ).filter( filtrarMetodoPago );
     //renderizar
     if (resultado.length > 0 ) {
         mostrarNegocios( resultado );
@@ -241,6 +241,15 @@ function filtrarMaximo( negocio ) {
     const { maximo } = objBusqueda;
     if (maximo ) {
         return negocio.rangoPrecioMaximo <= maximo;
+    }
+    return negocio;
+}
+//funcion para filtrar por metodo de pago
+function filtrarMetodoPago( negocio ) {
+    //destructuring
+    const { metodoPago } = objBusqueda;
+    if ( metodoPago ) {
+        return negocio.metodoPago === metodoPago;
     }
     return negocio;
 }
